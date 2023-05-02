@@ -1,0 +1,22 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title 'BienVenu dans espace administrateur' %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+         <div class="col-6 alert-info">
+             <span class="display-3">{{(countuser['value']) }} </span> Utilisateurs
+         </div>
+
+            <div class="col-6 alert-success">
+                <span class="display-3"> {{(countvoiture['value'])  }}</span> Voitures
+            </div>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

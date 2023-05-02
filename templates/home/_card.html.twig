@@ -1,0 +1,13 @@
+<div class="card">
+    <h5 class="card-title" style="font-weight: bold;font-size: 1.5rem">{{ voiture.modele}}</h5>
+    <img  class="voiture "  src="{{ asset('assets/upload/voitures/'~ voiture .image )}}" alt="{{ voiture.modele }}"  >
+
+    <h5> carburant: {{ voiture.carburant }}</h5>
+    <h5>boite:{{voiture.boitevitesse }}</h5>
+    <h5>Nombre de place:{{ voiture.nombreDePlace}}</h5>
+    <h5 class="text-danger">prix:{{ voiture.prix /100}} €/ jour </h5>
+    <a href="{{ path('app_booking_new',{'id': voiture.id}) }}" data-target="{{ voiture.id }}" class="btn btn-main btn-outline-primary m-2 px-2">Réserver Maintenant</a>
+   <!-- <button type="button" class="validateLocation btn btn-main btn-outline-primary m-2 px-2" data-toggle="modal" data-target="#M_{{ voiture.id }}">
+        Réserver Maintenant
+    </button>-->
+</div>

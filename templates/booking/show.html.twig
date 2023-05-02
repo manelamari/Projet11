@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking{% endblock %}
+
+{% block body %}
+<h3>{{ voiture.modele }}</h3>
+    <br>
+    <hr>
+
+    <table class="table">
+        <tbody>
+           <!-- <tr>
+                <th>Id</th>
+                <td>{{ booking.id }}</td>
+            </tr>-->
+            <tr>
+                <th>Date de début de réservation</th>
+                <td>{{ booking.dateDebut ? booking.dateDebut|date('d-m-Y') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Date de fin de réservation</th>
+                <td>{{ booking.dateFin ? booking.dateFin|date('d-m-Y') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Le montant totale à payer</th>
+                <td>{{ booking.prixtotale }} euros</td>
+            </tr>
+
+         <img  class="voiture "  src="{{ asset('assets/upload/voitures/'~ voiture.image )}}" alt="{{ voiture.modele }}"  >
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_booking_index') }}" >back to list</a>
+
+
+
+    {{ include('booking/_delete_form.html.twig') }}
+{% endblock %}

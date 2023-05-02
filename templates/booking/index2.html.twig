@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking index{% endblock %}
+
+{% block body %}
+<h1>La liste de  résevation   de {{ user.nom }}</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+       <!-- <th>Id</th>-->
+        <th>Date de début de réservation</th>
+        <th>Date de fin de réservation</th>
+        <th>Le montant totale à payer</th>
+        <th>actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for booking in bookings %}
+    <tr>
+      <!--  <td>{{ booking.id }}</td>-->
+        <td>{{ booking.dateDebut ? booking.dateDebut|date('Y-m-d') : '' }}</td>
+        <td>{{ booking.dateFin ? booking.dateFin|date('Y-m-d') : '' }}</td>
+        <td>{{ booking.prixtotale }}</td>
+        <td>
+            <a href="{{ path('app_booking_show', {'id': booking.id}) }}">show</a>
+
+
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

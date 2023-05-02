@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+        <div class="container">
+            <div class="grid">
+                {% for category in categorys %}
+                    {% include 'home/deatails.html.twig' with {category:category} only %}
+                {%endfor%}
+            </div>
+        </div>
+
+{% endblock %}

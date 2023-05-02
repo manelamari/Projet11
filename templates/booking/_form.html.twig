@@ -1,0 +1,24 @@
+{{ form_start(form) }}
+
+<div class="container">
+    <div class="card " >
+        <div class="card-body" >
+
+               <h5 class="card-title" style="font-weight: bold;font-size: 1.5rem">{{ voiture.modele}}</h5>
+               <img  class="voiture "  src="{{ asset('assets/upload/voitures/'~ voiture.image )}}" alt="{{ voiture.modele }}"  >
+
+               <h5> carburant: {{ voiture.carburant }}</h5>
+               <h5>boite:{{ voiture.boitevitesse }}</h5>
+               <h5>Nombre de place:{{ voiture.nombreDePlace}}</h5>
+                <h5>prix:{{ voiture.	prix /100}} €/ jour</h5>
+
+
+            <label class="text-danger"> le montant totales de la facture est</label><h5>{{( voiture.	prix /100)*days}} €/ jour</h5>
+
+        </div>
+    </div>
+
+    {{ form_widget(form) }}
+    <button class="btn btn-main btn-outline-primary m-2 px-2">{{ button_label|default('VALIDER') }}</button>
+{{ form_end(form) }}
+</div>

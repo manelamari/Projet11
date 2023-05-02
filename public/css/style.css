@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&family=Inter:wght@400;500;600;800&family=Montserrat:ital,wght@0,400;0,600;1,500&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+*{
+    font-family: 'Inter',sans-serif;
+
+}
+.nav-link{
+    color: #dedfe8!important;
+}
+.navbar{
+    padding: 30px!important;
+
+}
+img{
+    margin: 10px!important;
+    width: 150px!important;
+    height: 90px!important;
+}
+
+
+.category{
+    margin: 10px!important;
+    width: 300px!important;
+    height: 200px!important;
+}
+.grid{
+    display:grid!important ;
+    grid-template-columns: repeat(3,1fr) !important;
+    grid-gap: 20px!important;
+}
+.category{
+    margin: 10px!important;
+    width: 300px!important;
+    height: 200px!important;
+}
+.voiture{
+    margin: 10px!important;
+    width: 300px!important;
+    height: 200px!important;
+}
+
+

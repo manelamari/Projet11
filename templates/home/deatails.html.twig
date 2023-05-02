@@ -1,0 +1,13 @@
+<div class="card mb-4">
+
+    <div class="card-body">
+        <h5 class="card-title" style="font-weight: bold;font-size: 1.5rem">
+            <a href="{{ path('app_cat',{"id":category.id}) }}">
+                <img class="category"  src="{{ asset('assets/upload/categories/' ~ category.image) }}" alt="{{ category.name }}" class="card-img-top">
+            </a>
+            {{ category.name}}
+        </h5>
+
+
+    </div>
+</div>
